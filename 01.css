@@ -7,6 +7,7 @@
 }
 body {
   background: #000;
+  overflow: hidden;
 }
 main {
   height: 100vh;
@@ -48,6 +49,8 @@ main {
   left: 0;
   text-align: center;
   z-index: -1;
+  opacity: 0;
+  animation: blink 3s ease-in infinite;
 }
 
 @keyframes shake {
@@ -63,6 +66,34 @@ main {
     transform: translate(5vh, 0) rotate(-1deg);
   }
 }
+@keyframes blink {
+  0% {
+    opacity: 0;
+  }
+  47% {
+    opacity: 0;
+  }
+  48% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  55% {
+    opacity: 1;
+  }
+  58% {
+    opacity: 1;
+  }
+  59% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+
 
 
 /* EOF */
